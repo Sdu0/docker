@@ -1,0 +1,7 @@
+version: '3'
+services:
+  debian:
+    image: ldbc:v0.4.0
+    container_name: ldbc-container
+    volumes:
+      - /Users/dusen/Documents/github.com/ldbc:/root/ldbc

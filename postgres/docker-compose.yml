@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:11
+    volumes:
+      - /Users/dusen/Dev/docker/postgres/data:/var/lib/postgresql/data
+      - /Users/dusen/Dev/data:/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123456

@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mysql56:
+    image: mysql:5.6
+    restart: always
+    container_name: mysql56-container
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456'
+    ports:
+      - '3356:3306'
+    expose:
+      - '3356'
+    volumes:
+      - /Users/dusen/Dev/docker/mysql/data56:/var/lib/mysql
+  mysql8:
+    image: mysql:8
+    restart: always
+    container_name: mysql8-container
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456'
+    ports:
+      - '3386:3306'
+    expose:
+      - '3386'
+    volumes:
+      - /Users/dusen/Dev/docker/mysql/data8:/var/lib/mysql
