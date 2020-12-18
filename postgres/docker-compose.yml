@@ -2,6 +2,7 @@ version: '3'
 services:
   postgres:
     image: postgres:11
+    container_name: postgres11
     volumes:
       - /Users/dusen/Dev/docker/postgres/data:/var/lib/postgresql/data
       - /Users/dusen/Dev/data:/data
