@@ -1,3 +1,3 @@
 # docker
 
-Some of file that dockerfile and docker-compose yaml
+Some of files that .Dockerfile and docker-compose.yaml
