@@ -1,7 +1,7 @@
 # 编译
 FROM debian:10
 
-RUN apt update && apt install -y git maven wget
+RUN apt update && apt install -y git maven wget unzip
 
 WORKDIR /root/ldbc
 
@@ -16,5 +16,6 @@ WORKDIR /root/ldbc/ldbc_snb_implementations
 RUN ./build.sh
 
 WORKDIR /root/ldbc/ldbc_snb_implementations/cypher
-RUN ./scripts/get-neo4j.sh && 
-
+RUN chmod +x scripts/*.sh && ./scripts/get-neo4j.sh \
+    && ./scripts/environment-variables-default.sh \
+    && ./scripts/configure-neo4j.sh
