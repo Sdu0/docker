@@ -1,0 +1,13 @@
+version: '3'
+services:
+  clickhouse:
+    image: clickhouse:latest
+    container_name: clickhouse
+    volumes:
+      - ~/Dev/docker/conf:/conf
+      - ~/Dev/docker/clickhouse/data:/data
+    ports:
+      - "9000:9000"
+      - "9004:9004"
+      - "9009:9009"
+      - "8123:8123"
