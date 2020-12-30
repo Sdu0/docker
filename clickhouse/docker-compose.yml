@@ -4,7 +4,7 @@ services:
     image: clickhouse:latest
     container_name: clickhouse
     volumes:
-      - ~/Dev/docker/conf:/conf
+      - ~/Dev/docker/clickhouse/conf:/conf
       - ~/Dev/docker/clickhouse/data:/data
     ports:
       - "9000:9000"

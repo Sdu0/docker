@@ -5,8 +5,8 @@
         <!-- Default settings. -->
         <default>
             <!-- Maximum memory usage for processing single query, in bytes. -->
-            <!-- 48 * 1024 * 1024 * 1024 -->
-            <max_memory_usage>51539607552</max_memory_usage>
+            <!-- 8 * 1024 * 1024 * 1024 -->
+            <max_memory_usage>8589934592</max_memory_usage>
             <!-- Use cache of uncompressed blocks of data. Meaningful only for processing many of very short queries. -->
             <use_uncompressed_cache>0</use_uncompressed_cache>
             <load_balancing>random</load_balancing>
@@ -41,7 +41,7 @@
     <!-- Users and ACL. -->
     <users>
         <root>
-            <password_double_sha1_hex>1997e695f00b4a78ac7c4483307734896e4cbb02</password_double_sha1_hex>
+            <password>123456</password>
             <networks incl="networks" replace="replace">
                 <ip>::/0</ip>
             </networks>
