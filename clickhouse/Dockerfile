@@ -1,4 +1,3 @@
-# 编译
 FROM debian:10
 
 RUN apt update && apt install -y wget net-tools apt-transport-https ca-certificates dirmngr \
