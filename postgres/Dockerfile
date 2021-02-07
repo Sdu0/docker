@@ -6,6 +6,9 @@ ENV PROTOC_VERSION=1.3
 
 ENV WAL2JSON_COMMIT_ID=92b33c7d7c2fccbeb9f79455dafbc92e87e00ddd
 
+# Update source
+RUN printf "deb http://mirrors.aliyun.com/debian stretch main contrib non-free\ndeb http://mirrors.aliyun.com/debian stretch-proposed-updates main contrib non-free\ndeb http://mirrors.aliyun.com/debian stretch-updates main contrib non-free\ndeb-src http://mirrors.aliyun.com/debian stretch main contrib non-free\ndeb-src http://mirrors.aliyun.com/debian stretch-proposed-updates main contrib non-free\ndeb-src http://mirrors.aliyun.com/debian stretch-updates main contrib non-free\ndeb http://mirrors.aliyun.com/debian-security/ stretch/updates main non-free contrib\ndeb-src http://mirrors.aliyun.com/debian-security/ stretch/updates main non-free contrib\ndeb http://mirrors.aliyuncs.com/debian stretch main contrib non-free\ndeb http://mirrors.aliyuncs.com/debian stretch-proposed-updates main contrib non-free\ndeb http://mirrors.aliyuncs.com/debian stretch-updates main contrib non-free\ndeb-src http://mirrors.aliyuncs.com/debian stretch main contrib non-free\ndeb-src http://mirrors.aliyuncs.com/debian stretch-proposed-updates main contrib non-free\ndeb-src http://mirrors.aliyuncs.com/debian stretch-updates main contrib non-free\ndeb http://mirrors.aliyuncs.com/debian-security/ stretch/updates main non-free contrib\ndeb-src http://mirrors.aliyuncs.com/debian-security/ stretch/updates main non-free contrib" > /etc/apt/sources.list
+
 # Install the packages which will be required to get everything to compile
 RUN apt-get update \
     && apt-get install -f -y --no-install-recommends \
