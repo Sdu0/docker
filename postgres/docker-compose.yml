@@ -1,7 +1,7 @@
 version: '3'
 services:
   postgres:
-    image: debezium/postgres:11
+    image: postgres:11
     container_name: postgres11
     volumes:
       - ~/Dev/docker/postgres/data:/var/lib/postgresql/data
